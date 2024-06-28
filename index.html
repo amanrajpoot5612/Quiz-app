@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <!-- Main CSS File  -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Start Start Button Component  -->
+        <button id="start-btn">Start Quiz</button>
+        <!-- End Start Button Component  -->
+
+        <!-- Start Quiz Rules Component  -->
+        <div class="quiz-rules">
+            <div class="rules-title">
+                <span>Rules are their too</span>
+            </div>
+            <div class="rules-list">
+                <div>1. Option can be changed only before submitting.</div>
+                <div>2. Take care of time at the top-right corner.</div>
+                <div>3. Once started the quiz their is no going back <br> (Have a mountain dew).</div>
+                <div>4. Let's see either you are a 10/10 or mehh.</div>
+                <label for="subject">5. You can choose a category:</label>
+                <select name="subject" id="subject">
+                    <option value="HTML">HTML</option>
+                    <!-- <option value="General-Knowledge">General Knowledge</option> -->
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <button id="quit-btn">Quit</button>
+                <button id="continue-btn">Continue</button>
+            </div>
+        </div>
+        <!-- End Quiz Rules Component  -->
+
+        <!-- Start Quiz Component  -->
+        <div class="quiz">
+            <div class="info">
+                <div class="subject">
+                    Subject <span>HTML</span>
+                </div>
+                <div class="timer">
+                    Time Left <span>0:00</span>
+                </div>
+            </div>
+            <div class="question">
+                <div class="title">
+                    What does HTML stand for?
+                </div>
+                <div class="answers">
+                    <div class="answer">
+                        <input type="radio" name="answers" id="answer-1">
+                        <label for="answer-1">Hyperlinks Text Markup Language</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="answers" id="answer-2">
+                        <label for="answer-2">Hyperlinks Text Markup Language</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="answers" id="answer-3">
+                        <label for="answer-3">Hyperlinks Text Markup Language</label>
+                    </div>
+                    <div class="answer">
+                        <input type="radio" name="answers" id="answer-4">
+                        <label for="answer-4">Hyperlinks Text Markup Language</label>
+                    </div>
+                </div>
+            </div>
+            <div class="bullets-button">
+                <div class="bullets">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <button id="next-btn">Next ></button>
+            </div>
+        </div>
+        <!-- End Quiz Component  -->
+
+        <!-- Start Result Component  -->
+        <div class="result">
+            <img src="./assets/reward.png" alt="">
+            <div class="msg">
+                <h1>Congratulations!</h1>
+                <span class="msg-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed perferendis
+                    sequi dolorem suscipit
+                    sunt error quae delectus reiciendis? Laudantium assumenda accusamus cumque illum sint corrupti
+                    incidunt? Sed quos suscipit magnam?</span>
+            </div>
+            <div class="restart-btn">
+                <button id="restart-btn">
+                    Restart
+                </button>
+            </div>
+        </div>
+        <!-- End Result Component  -->
+    </div>
+
+    <script src="./js/UI.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
+</body>
+
+</html>
