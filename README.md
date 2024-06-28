@@ -10,7 +10,7 @@ Contains different quiz JSON data files to display questions with multiple choic
 
 ## Demo
 > This shows a brief overview of the quiz app.
-<img src ="./assets/Quiz_Demo.gif">
+<img src ="./assets/Demo_Quiz.gif">
 
 # Technologies used
 - HTML
