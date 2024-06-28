@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Start Global Variables  */
+:root {
+  --main-color: rgb(146, 137, 137);
+  --alt-color: rgb(105, 72, 72);
+  --main-alt-color: rgba(255, 0, 0, 0.197);
+}
+
+/* End Global Variables  */
+
+/* Start Global Rules  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--main-color);
+}
+
+.container {
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  margin: 0 auto;
+}
+
+/* End Global Rules  */
+
+/* Start Start Button Styling  */
+#start-btn {
+  padding: 20px 45px;
+  font-size: 25px;
+  border: 2px solid var(--alt-color);
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#start-btn:hover {
+  background-color: var(--alt-color);
+  color: #fff;
+}
+
+/* End Start Button Styling  */
+
+/* Start Quiz Rules Styling  */
+.quiz-rules {
+  background-color: var(--main-alt-color);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  width: 600px;
+  display: none;
+}
+
+.quiz-rules > div {
+  padding: 15px 30px;
+}
+
+.quiz-rules .rules-title span {
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.quiz-rules .rules-list {
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+
+.quiz-rules .rules-list > * {
+  margin-bottom: 10px;
+}
+
+.quiz-rules .rules-list select {
+  width: 50%;
+  outline: none;
+  border: 2px solid var(--alt-color);
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+.quiz-rules .buttons button {
+  outline: 2px solid #fff;
+  border: 2px solid var(--alt-color);
+  padding: 5px 16px;
+  background-color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.quiz-rules .buttons #quit-btn:hover,
+.quiz-rules .buttons #continue-btn {
+  background-color: var(--alt-color);
+  color: #fff;
+}
+
+.quiz-rules .buttons #continue-btn:hover {
+  outline: 2px solid var(--alt-color);
+  border-color: #fff;
+}
+
+.quiz-rules .buttons #continue-btn:hover {
+}
+
+@media (max-width: 767px) {
+  .quiz-rules {
+    width: 450px;
+    margin: 2px;
+    font-size: 14px;
+  }
+
+  .quiz-rules > div {
+    padding: 10px 20px;
+  }
+
+  .quiz-rules .rules-list select {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .quiz-rules .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* End Quiz Rules Styling  */
+
+/* Start Quiz Styling  */
+.quiz {
+  background-color: var(--main-alt-color);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  width: 600px;
+  max-width: 95%;
+  display: none;
+}
+
+.quiz > * {
+  padding: 15px 30px;
+}
+
+.quiz .info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.quiz .info > * {
+  background-color: var(--alt-color);
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .quiz .info > * {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.quiz .info > * span {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 2px 4px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+}
+
+.quiz .question {
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+}
+
+@media (max-width: 767px) {
+  .quiz .question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 340px;
+    max-height: 300px;
+  }
+}
+
+.quiz .question .title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.1px;
+}
+
+.quiz .question .answers > div {
+  padding: 4px 6px;
+  margin-bottom: 5px;
+}
+
+.quiz .question .answers .answer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.quiz .question .answers > div label {
+  padding-left: 10px;
+  text-align: left;
+  word-wrap: none;
+  cursor: pointer;
+}
+
+.quiz .bullets-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.quiz .bullets-button .bullets {
+  display: flex;
+  gap: 5px;
+}
+
+.quiz .bullets-button .bullets span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #999;
+}
+
+.quiz .bullets-button .bullets span.active {
+  background-color: var(--alt-color);
+}
+
+.quiz .bullets-button button {
+  outline: 2px solid #fff;
+  border: 2px solid var(--alt-color);
+  padding: 5px 16px;
+  background-color: var(--alt-color);
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.quiz .bullets-button button:hover {
+  outline: 2px solid var(--alt-color);
+  border-color: #fff;
+}
+
+@media (max-width: 767px) {
+  .quiz .bullets-button .bullets {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .quiz .bullets-button button {
+    width: 100%;
+  }
+}
+
+/* End Quiz Styling  */
+
+/* Start Result Styling  */
+.result {
+  background-color: var(--main-alt-color);
+  border-radius: 10px;
+  padding: 20px 30px;
+  width: 300px;
+  display: none;
+}
+
+.result img {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.result .msg {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.result .msg h1 {
+  color: #324b53;
+  margin-bottom: 15px;
+}
+
+.result .msg span {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.result .restart-btn {
+  text-align: center;
+}
+
+.result .restart-btn button {
+  outline: 2px solid #fff;
+  border: 2px solid var(--alt-color);
+  background-color: var(--alt-color);
+  padding: 10px 45px;
+  font-size: 25px;
+  border-radius: 6px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+}
+
+.result .restart-btn button:hover {
+  outline: 2px solid var(--alt-color);
+  border-color: #fff;
+}
+
+/* End Result Styling  */
